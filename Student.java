@@ -6,6 +6,8 @@ public class Student {
     int Standard;
     String Section;
 
+
+    // Constructor
     public Student(int age, String name, int standard, String sec) {
         Age = age;
         Name = name;
