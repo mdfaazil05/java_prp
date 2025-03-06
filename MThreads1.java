@@ -4,13 +4,13 @@ class Bank {
     public synchronized void amountWithdraw(int Wamount, String Name) {
         if (Wamount <= Balance) {
             System.out.println("\n-------------------------------------------\n");
-            System.out.println(Name + " is withdrawing the amount: " + Wamount);
+            System.out.println(Name + " is withdrawing the amount: " + Wamount+" "+Thread.currentThread().getName() );
             Balance = Balance - Wamount;
             System.out.println("Balance amount: " + Balance);
             System.out.println("\n*******************************************\n");
         } else {
             // System.out.println("\n-------------------------------------------\n");
-            System.out.println("Withdrawing by "+ Name+ " is failed due to insufficient funds\n"+"Account Balance: "+Balance);
+            System.out.println("Withdrawing by "+ Name+ " is failed due to insufficient funds\n"+"Account Balance: "+Balance+" "+Thread.currentThread().getName() );
             System.out.println("\n-------------------------------------------\n");
         }
     }
